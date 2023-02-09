@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 1) ----------------------------------------------------------------------
+        var str = "Welcome to this Javascript Guide!";
+        var strArr = str.split(" ");
+        for(var i=0;i<strArr.length;i++){
+            var temp = strArr[i].split("");
+            temp = temp.reverse();
+            strArr[i] = temp.join("");
+        }
+        console.log(strArr.join(" "));
+
+        // 2) ----------------------------------------------------------------------
+        var arraylist = ['a','b','c','d','e','f'];
+        const l = arraylist.length;
+        for(var i=0;i<l;i++){
+            arraylist.pop();
+        }
+        console.log(arraylist)
+
+        // 3) ----------------------------------------------------------------------
+        var enque = []
+        enque.push(2);
+        enque.unshift(1)
+        console.log(enque)
+        var deque = [1,2]
+        deque.pop()
+        deque.shift();
+        console.log(deque)
+
+        // 4) ----------------------------------------------------------------------
+        for(var i=1;i<100;i++){
+            if(i%3==0 && i%5==0){
+                console.log(i + " fizzbuzz");
+            }
+            else if(i%3==0){
+                console.log(i + " fizz");
+            }
+            else if(i%5==0){
+                console.log(i + " buzz");
+            }
+        }
+        // 5) ----------------------------------------------------------------------
+
+        var a = "Mary"
+        var b = "Army"
+        
+        a = a.toLowerCase().split("");
+        b = b.toLowerCase().split("");
+
+        var str1 = new Set(a);
+        var str2 = new Set(b);
+
+        str1 = Array.from(str1);
+        str2 = Array.from(str2);
+
+        console.log(str1,str2)
+        let flag = 0;
+        if(str1.length == str2.length){
+            for(var i=0;i<str1.length;i++){
+                let f=0;
+                for(var j=0;j<str2.length;j++){
+                    if(str1[i] == str2[j]){
+                        f=1
+                        break;
+                    }
+                }
+                if(f==0){
+                    flag = 1;
+                    break;
+                }
+            }
+            if(flag == 0){
+                console.log("yes");
+            }
+            else{
+                console.log("no");
+            }
+        }
+        else{
+            console.log("no");
+        }
+
+        // 6) ----------------------------------------------------------------------
+
+        var name = "H. hern";
+
+        arr = name.split(" ");
+       
+        if(arr.length == 3){
+            if(arr[0].length ==2 && arr[0][1]=="." && arr[0][0] == arr[0][0].toUpperCase() && arr[1].length ==2 && arr[1][1]=="." && arr[0][0] == arr[0][0].toUpperCase() && arr[2].length>2){
+                console.log(true);
+            }
+            else if(arr[0].length > 2 && arr[1].length ==2 && arr[1][1]=="." && arr[0][0] == arr[0][0].toUpperCase() && arr[2].length >2){
+                console.log(true);
+            }
+            else if(arr[0].length > 2 && arr[1].length>2 && arr[2].length>2){
+                console.log(true);
+            }
+            else{
+                console.log(false);
+            }
+        }
+        else if(arr.length==2){
+            if(arr[0].length == 2 && arr[0][1] == "." && arr[0][0] == arr[0][0].toUpperCase() && arr[1].length > 2){
+                console.log(true);
+            }
+            else{
+                console.log(false)
+            }
+            
+        }
+        else{
+            console.log(false);
+        }
+
+        // ------------------------------------------------------------------------------------------------------------------------
+
+    </script>
+</body>
+</html>
